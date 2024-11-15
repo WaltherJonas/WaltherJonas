@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo"></p>
+<button onclick="back2BE()">Click me to finish and return Brain Explorer</button>
+
+
+<script>
+document.getElementById("demo").innerHTML = "Hello Tobias!";
+function back2BE() {
+	BeApp.postMessage(JSON.stringify({
+	  "type": "back",
+	  "backPayload": {
+		"success": true,
+		"score": 123,
+		"showShareButton": true,
+		"showPlayAgainButton": true,
+		"postGameResources": [
+		  {
+			"buttonText": {
+			  "localizations": {
+				"en": "Other Thing"
+			  }
+			},
+			"urlDestination": "https://www.google.com"
+		  }
+		],
+		"goodbyeMessage": {
+		  "localizations": {
+			"en": "Nice."
+		  }
+		}
+	  }
+	}))
+}
+</script> 
+
+</body>
+</html>
