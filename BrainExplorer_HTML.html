@@ -3,11 +3,8 @@
 <body>
 
 <p id="demo"></p>
-<button onclick="back2BE()">Click me to finish and return Brain Explorer</button>
-
-
+<button onclick="back2BE() " style="font-size : 20px; width: 100%; height: 100px;" /> >Click me to finish and return Brain Explorer</button>
 <script>
-document.getElementById("demo").innerHTML = "Hello Tobias!";
 function back2BE() {
 	BeApp.postMessage(JSON.stringify({
 	  "type": "back",
